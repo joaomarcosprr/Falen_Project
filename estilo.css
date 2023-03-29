@@ -1,9 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
 *{
     border: 0;
     margin: 0;
     outline: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
+
+:root {
+    --primary: #43E8DE ;
+    --secondary: #B068C9 ;
+    --third: #9D9898;
+    --break: #000;
+    --white: #fff;
+
+}
+
+header {
+    background-color:#43E8DE;
+    border-bottom: 0.5rem solid var(--third);
+    display: flex;
+    height: 6rem;
+}
+
+header picture {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+
+}
+header picture img {
+    height: 100%;
+}
+
+/*navegador*/
+header nav {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+     justify-content: right;
+}
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+   
+}
+header nav ul li {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: var(--break);
+}
+
+header nav ul li:hover {
+    background-color: var(--third);
+}
+footer{
+    background-color: #9D9898;
+    height: 4rem;
+
+}
+footer img{
+    height: 100%;
+    padding: 0.5rem;
+}
+
+
+
 
 
 
