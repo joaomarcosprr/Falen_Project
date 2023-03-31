@@ -16,7 +16,7 @@
     --white: #fff;
 
 }
-
+/*Cabeçalho*/
 header {
     background-color:#43E8DE;
     border-bottom: 0.5rem solid var(--third);
@@ -31,6 +31,11 @@ header picture {
 }
 header picture img {
     height: 100%;
+}
+
+/*Parte central*/
+main{
+    min-height: calc(100vh - 10rem);
 }
 
 /*navegador*/
@@ -70,6 +75,18 @@ footer{
 footer img{
     height: 100%;
     padding: 0.5rem;
+}
+
+/*Rodape*/
+footer {
+    
+    background-color: #43E8DE;
+    height: 4rem;
+}
+
+footer img {
+    height: 100%;
+    padding: 0,5rem;
 }
 
 
