@@ -5,7 +5,7 @@
     outline: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 1000;
 }
 
 :root {
@@ -36,6 +36,20 @@ header picture img {
 /*Parte central*/
 main{
     min-height: calc(100vh - 10rem);
+}
+
+main section {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+main section img{
+    height: 18rem;
+}
+
+main section.img h1{
+    color: #000;
 }
 
 /*navegador*/
