@@ -4,8 +4,13 @@
     margin: 0;
     outline: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    
     font-weight: 1000;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F0F0F0;
+    
 }
 
 :root {
@@ -44,13 +49,27 @@ main section {
     padding: 15px;
 }
 
-main section img{
-    height: 18rem;
+main section img {
+    height: 10rem;
 }
+
 
 main section.img h1{
     color: #000;
 }
+/*Pagina inicial*/
+.photo {
+    min-height: calc(100vh - 10rem);
+    
+}
+.photo aside {
+    justify-content: center;
+    
+}
+.photo aside img {
+    height: 20rem;
+}
+
 
 /*navegador*/
 header nav {
@@ -93,9 +112,11 @@ footer img{
 
 /*Rodape*/
 footer {
-    
+    position: absolute;
+    bottom: 0;
     background-color: #43E8DE;
     height: 4rem;
+    width: 100vw;
 }
 
 footer img {

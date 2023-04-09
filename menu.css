@@ -1,99 +1,104 @@
 
-@media (max-width: 690px) {
-    header label[for="menu-toggle"] {
-      display: flex;
-      flex: 1;
-      justify-content: flex-end;
-    }
-    header label[for="menu-toggle"] div.menu-hamburger {
-      border: 1px solid #fff;
-      width: 35px;
-      height: 15px;
-      margin: 15px 2px 5px 5px;
-      cursor: pointer;
-    }
-    header.container {
-      flex-wrap: wrap;
-    }
-    header div.menu {
-      display: none;
-      animation: fade-out 1s;
-    }
-    header label[for="menu-toggle"] div.menu-hamburger span.hamburger {
-      position: relative;
-      display: block;
-      background-color: black;
-      width: 30px;
-      height: 2px;
-    }
-    header label[for="menu-toggle"] div.menu-hamburger span.hamburger:before,
-    header label[for="menu-toggle"] div.menu-hamburger span.hamburger:after {
-      position: absolute;
-      display: block;
-      background-color: black;
-      width: 100%;
-      height: 100%;
-      content: "";
-    }
-    header label[for="menu-toggle"] div.menu-hamburger span.hamburger:before {
-      top: -10px;
-    }
-    header label[for="menu-toggle"] div.menu-hamburger span.hamburger:after {
-      bottom: -10px;
-    }
-    header input:checked ~ div.menu {
-      display: block;
-      animation: fade-in 1s;
-    }
-    header input:checked ~ div.menu div ul {
-      display: flex;
-      flex-direction: column;
-    }
-    header input:checked ~ div.menu div.menu-right {
-      justify-content: flex-start;
-    }
-    header input:checked ~ label .hamburger {
-      transform: rotate(45deg);
-      transition: 0.5s;
-    }
-    header input:checked ~ label .hamburger:before,
-    header input:checked ~ label .hamburger:after {
-      transform: rotate(90deg);
-      transition: 0.5s;
-    }
-    header
-      input:checked
-      ~ label[for="menu-toggle"]
-      div.menu-hamburger
-      span.hamburger:before {
-      top: 0px;
-    }
-    header
-      input:checked
-      ~ label[for="menu-toggle"]
-      div.menu-hamburger
-      span.hamburger:after {
-      bottom: 0px;
-    }
-    @keyframes fade-in {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-    @keyframes fade-out {
-      from {
-        opacity: 1;
-      }
-      to {
-        opacity: 0;
-      }
-    }
-    section.card-principal {
-      display: grid;
-      grid-template-areas: "g1" "ge" "gs";
-      grid-gap: 10px;
-    }
-  }
+
+:root {
+    --primary: #43E8DE ;
+    --secondary: #B068C9 ;
+    --third: #9D9898;
+    --break: #000;
+    --white: #fff;
+
+}
+
+
+.menu .menu-faketrigger {
+    position: absolute;
+    z-index: 1000;
+    width: 35px;
+    height: 35px;
+    
+    left: calc(100vw - 10vw);
+    cursor: pointer;
+    
+}
+
+
+
+.menu .menu-line {
+    position: absolute;
+    z-index: 999; 
+    width: 35px;
+    height: 35px;
+    left: (100vw - 40px);
+    margin-left: 10px;
+    
+}
+.menu .menu-line span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(32, 32, 32);
+    border-radius: 3px;
+    transition: all ease .3s ;
+}
+
+/*Para Fazer o X do menu*/
+
+.menu .menu-faketrigger ~ .menu-line span {
+    /*background-color: var(--primary);*/
+}
+
+
+
+.menu ul{
+    position: fixed;
+    z-index: 998;
+    left: calc(100vw - 83px);
+    top: 10px; 
+    background-color: #c8e486;
+    border-left: solid var(--primary) 2px ;
+    border-bottom: solid var(--primary) 2px;
+    border-top: var(--primary) 2px;
+    width: 80px;
+    height:200px ;
+    padding-top: 70px;
+    display: none;
+    margin-left: 80px;
+    transition: all ease .2s;
+}
+
+.menu ul li {
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+}
+
+.menu ul li:hover {
+    background-color: rgb(175, 175, 175);
+    cursor: pointer;
+}
+
+.menu .menu-faketrigger:checked ~ .menu-line span:nth-child(1){
+    transform-origin: 0% 0%;
+    transform: rotate(45deg) scaleX(1.25);
+}
+
+.menu .menu-faketrigger:checked ~ .menu-line span:nth-child(2){
+    opacity: 0;
+}
+
+.menu .menu-faketrigger:checked ~ .menu-line span:nth-child(3){
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg)scaleX(1.25);
+
+
+}
+.menu input:checked ~ ul {
+    display: block;
+    margin-left: 0;
+}

@@ -1,13 +1,13 @@
-@media (max-width: 1010px) {
-    main > section.list{
+@media (max-width: 794px) {
+    main > section.article{
         grid-template-columns: auto auto auto;
     }
 }
-@media (max-width: 760px) {
+@media (max-width: 650px) {
     header {
         height: 4.5rem;
     }
-    main > section.list {
+    main > section.article {
         grid-template-columns: auto auto;
     }
     main > section {
