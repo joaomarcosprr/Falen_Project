@@ -27,6 +27,7 @@ header {
     border-bottom: 0.5rem solid var(--third);
     display: flex;
     height: 6rem;
+    width: 100%;
 }
 
 header picture {
@@ -60,12 +61,12 @@ main section.img h1{
 /*Pagina inicial*/
 .photo {
     min-height: calc(100vh - 10rem);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     
 }
-.photo aside {
-    justify-content: center;
-    
-}
+
 .photo aside img {
     height: 20rem;
 }
@@ -103,7 +104,7 @@ header nav ul li:hover {
 footer{
     background-color: #9D9898;
     height: 4rem;
-
+    width: 100%;
 }
 footer img{
     height: 100%;
@@ -116,12 +117,16 @@ footer {
     bottom: 0;
     background-color: #43E8DE;
     height: 4rem;
-    width: 100vw;
+    width: 100%;
 }
 
 footer img {
     height: 100%;
     padding: 0,5rem;
+}
+
+.img{
+    flex-wrap: wrap;
 }
 
 

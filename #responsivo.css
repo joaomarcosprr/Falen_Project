@@ -16,6 +16,10 @@
     footer {
         height: 2.6rem;
     }
+
+    p{
+        font-size: 1rem;
+    }
 }
 @media (max-width: 500px) {
     main > section.list {
