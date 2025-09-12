@@ -8,54 +8,43 @@
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="menu.css">
 </head>
-<body>
-    <header>
-        <picture>
-            <img src="./img/lupa .png" alt="lupa">
-        </picture>
+<body class="body">
+    <header class="header">
+    
+        <!-- HTML -->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/books.png" alt="Minha Marca">
+            </div>
+            <!-- botão hamburguer -->
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+    
+            <ul class="nav-links" id="nav-links">
+                <li><a href="Estante.html">Estante</a></li>
+                <li><a href="Cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+        <main>
         
-        <nav class="menu"> 
-            <input type="checkbox" class="menu-faketrigger" />
-            <div class="menu-line">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="split">
+                <aside class="left-panel">
+                    <h1>Falen</h1>
+                    <p>Coletania de Livros de Romance e Mistério</p>
+                    <p class="lead">Escrito pela Norte-Americana Lauren Kate. A coletania de livros retrata a vida da personagem Lucinda Price, uma garota que foi mandada para um reformatório, tida como piromaníaca, onde cconhece o seu verdadeiro amor e meio de vária confusões</p>
+                </aside>
+                <main class="right-panel">
+                    <img src="img/fotoprincipal.png" alt="">     
+                </main>
             </div>
         
-            <ul>
-                
-                <li>
-                    <a href="page1.html">Comprar</a>
-                </li>
-                <li>
-                    <a href="">Cadastro</a>
-                </li>
-                <li>
-                    <a href="">Menu</a>
-                </li>
-                <li>
-                    <a href="">Sair</a>
-                </li>
-            </ul>
-        </nav>   
-        </header>
-        <main class="photo">
-            
-            <aside>
-                <img src="./img/Fallen é uma série de livros de romance e mistério sobre anjos escrita pela norte-americana Lauren Kate. A saga conta a história de Lucinda Price, uma garota que é mandada para um reformatório, tida como piromaníaca. (1).png" alt="text">
-                <img src="./img/fotoprincipal.png" alt="fotoprincipal">
-            </aside>
-           
         </main>
 
         
-        
-        <footer>
-            <a href="https://www.instagram.com/"><img src="./img/insta .png" alt="Instagram"></a>
-            <a href="https://www.tiktok.com/pt-BR/"><img src="./img/tik tok .png" alt="Tik Tok"></a>
-            <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoicHQifQ%3D%3D%22%7D"><img src="./img/twiter .png" alt="Twiter"></a>
-
-        </footer>
+        <script src="Menu.js"></script>
     
 </body>
 </html>

@@ -1,135 +1,186 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
-*{
-    border: 0;
-    margin: 0;
-    outline: 0;
-    box-sizing: border-box;
-    
-    font-weight: 1000;
-}
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #F0F0F0;
-    
-}
+/*Nav*/
 
-:root {
-    --primary: #43E8DE ;
-    --secondary: #B068C9 ;
-    --third: #9D9898;
-    --break: #000;
-    --white: #fff;
-
-}
-/*Cabeçalho*/
-header {
-    background-color:#43E8DE;
-    border-bottom: 0.5rem solid var(--third);
-    display: flex;
-    height: 6rem;
-    width: 100%;
-}
-
-header picture {
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-
-}
-header picture img {
-    height: 100%;
-}
-
-/*Parte central*/
-main{
-    min-height: calc(100vh - 10rem);
-}
-
-main section {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-}
-
-main section img {
-    height: 10rem;
+.logo img {
+  max-width: 40px; /* tamanho máximo */
+  height: auto; /* mantém proporção */
+  display: block; /* remove espaçamento extra */
 }
 
 
-main section.img h1{
-    color: #000;
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(53, 190, 224, 0.9);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
-/*Pagina inicial*/
-.photo {
-    min-height: calc(100vh - 10rem);
-    display: flex;
-    justify-content: flex-end;
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a{
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text);
+  transition: color .2s;
+}
+.nav-links a:hover{ color: var(--accent); }
+
+/* botão hamburguer */
+.hamburger{
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* responsivo */
+@media (max-width: 768px){
+  .nav-links{
+    display: none;
+    position: fixed;   /* ocupa a tela */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    
+    background: #fff;
+    gap: 2rem;
+    z-index: 999;
+  }
+
+  .nav-links.show{ display: flex; } /* aparece quando ativo */
+
+  .hamburger{ display: block; }
 }
 
-.photo aside img {
-    height: 20rem;
+/*Tela index repartição*/
+:root{
+  --bg: #ffffff;
+  --panel-bg: #f7f9fb;
+  --text: #0f1724;
+  --accent: #0ea5a8;
+  --max-width: 520px;
+}
+
+/* layout */
+.split{
+  display: flex;
+  width: 100%;
+  height: 100vh; /* ocupa toda a altura da tela */
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center; /* centraliza verticalmente */
+  gap: 2rem; /* espaço entre esquerda e direita */
+  padding: 0 2rem; /* opcional, para dar folga nas laterais */
+  box-sizing: border-box;
+}
+
+.left-panel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centraliza conteúdo verticalmente dentro do painel */
+  align-items: center; /* centraliza horizontalmente dentro do painel */
+  text-align: center; /* centraliza o texto */
+  max-width: 50%; /* largura máxima de cada lado */
+}
+
+/* limite de leitura para linhas confortáveis */
+.left-panel > *{ max-width: var(--max-width); }
+
+/* tipografia */
+.left-panel h1{
+  margin: 0 0 .25rem 0;
+  font-size: clamp(1.25rem, 2.4vw, 2rem);
+  line-height: 1.15;
+  color: var(--text);
+}
+.left-panel p{
+  margin: 0;
+  font-size: clamp(.95rem, 1.6vw, 1.05rem);
+  line-height: 1.5;
+  color: rgba(15,23,36,0.9);
+  hyphens: auto;
+}
+
+/* parágrafo de destaque */
+.left-panel .lead{
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* opcional: limitar visualmente a 3 linhas (só se quiser truncar) */
+.left-panel p.truncate{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* metade direita e responsividade */
+.right-panel{ width:50%; min-height:100vh; }
+@media (max-width: 880px){
+  .split{ flex-direction: column; }
+  .left-panel, .right-panel{ width:100%; padding:24px; }
+  :root{ --max-width: 100%; }
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centraliza conteúdo verticalmente dentro do painel */
+  align-items: center; /* centraliza horizontalmente dentro do painel */
+  text-align: center; /* centraliza o texto */
+  max-width: 50%; /* largura máxima de cada lado */
+}
+
+.right-panel img {
+  max-width: 100%;
+  max-height: 80vh; /* garante que a imagem não ultrapasse a tela */
+  object-fit: contain;
+  display: block;
 }
 
 
-/*navegador*/
-header nav {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    width: 100%;
-     justify-content: right;
-}
-header nav ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    height: 100%;
-   
-}
-header nav ul li {
-    padding: 2rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-header nav ul li a{
-    text-decoration: none;
-    color: var(--break);
+/*Tirar as margens*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-header nav ul li:hover {
-    background-color: var(--third);
-}
-footer{
-    background-color: #9D9898;
-    height: 4rem;
-    width: 100%;
-}
-footer img{
-    height: 100%;
-    padding: 0.5rem;
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* remove toda rolagem */
 }
 
-/*Rodape*/
-footer {
-    position: absolute;
-    bottom: 0;
-    background-color: #43E8DE;
-    height: 4rem;
-    width: 100%;
+.split {
+  display: flex;
+  width: 100%;
+  height: 100%; /* ocupar toda a tela */
 }
 
-footer img {
-    height: 100%;
-    padding: 0,5rem;
+.left-panel, .right-panel {
+  height: 100%; /* ocupa toda altura do split */
+  overflow: hidden; /* impede que conteúdo interno crie scroll */
 }
 
-.img{
-    flex-wrap: wrap;
+/* se tiver imagens grandes na right-panel */
+.right-panel img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: block;
 }
-
-
 
 
 
