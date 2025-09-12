@@ -91,6 +91,7 @@
   align-items: center; /* centraliza horizontalmente dentro do painel */
   text-align: center; /* centraliza o texto */
   max-width: 50%; /* largura máxima de cada lado */
+  margin-block-end: 6rem;
 }
 
 /* limite de leitura para linhas confortáveis */
@@ -135,7 +136,6 @@
 
 .right-panel {
   display: flex;
-  flex-direction: column;
   justify-content: center; /* centraliza conteúdo verticalmente dentro do painel */
   align-items: center; /* centraliza horizontalmente dentro do painel */
   text-align: center; /* centraliza o texto */
@@ -146,7 +146,8 @@
   max-width: 100%;
   max-height: 80vh; /* garante que a imagem não ultrapasse a tela */
   object-fit: contain;
-  display: block;
+  display: flex;
+  margin-block-end: 5rem;
 }
 
 
