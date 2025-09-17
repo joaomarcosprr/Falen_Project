@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+/*--------------------*/
+/*      INDEX         */
+/*--------------------*/
 
-/*index*/
 /*Nav*/
 
 .logo img {
@@ -137,18 +139,20 @@
 }
 
 .right-panel {
+  width:50%; 
+  min-height:100vh; 
   display: flex;
-  justify-content: center; /* centraliza conteúdo verticalmente dentro do painel */
-  align-items: center; /* centraliza horizontalmente dentro do painel */
-  text-align: center; /* centraliza o texto */
-  max-width: 50%; /* largura máxima de cada lado */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 50%;
 }
 
 .right-panel img {
   max-width: 100%;
   max-height: 80vh; /* garante que a imagem não ultrapasse a tela */
   object-fit: contain;
-  display: flex;
+  display: block;
   margin-block-end: 5rem;
 }
 
@@ -162,18 +166,22 @@
 
 html, body {
   width: 100%;
-  height: 100%;
-  overflow: hidden; /* remove toda rolagem */
+  height: 100vh;
+  overflow: auto; /* deixa a rolagem normal */
+}
+
+body.no-scroll {
+  overflow: hidden; /* desativa a rolagem quando a classe é adicionada */
 }
 
 .split {
   display: flex;
   width: 100%;
-  height: 100%; /* ocupar toda a tela */
+  height: 100vh; /* ocupar toda a tela */
 }
 
 .left-panel, .right-panel {
-  height: 100%; /* ocupa toda altura do split */
+  height: 100vh; /* ocupa toda altura do split */
   overflow: hidden; /* impede que conteúdo interno crie scroll */
 }
 
@@ -186,7 +194,10 @@ html, body {
 }
 
 
-/*Estante*/
+/*--------------------*/
+/*     ESTANTE        */
+/*--------------------*/
+
 
 body {
   font-family: Arial, sans-serif;
@@ -233,13 +244,13 @@ main {
   margin: 10px 0;
   font-size: 18px;
   font-weight: bold;
-  color: #27ae60;
+  color: #0ea5a8;
 }
 
 .botao {
   display: inline-block;
   padding: 8px 12px;
-  background: #27ae60;
+  background: #0ea5a8;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -248,4 +259,88 @@ main {
 
 .botao:hover {
   background: #219150;
+}
+
+
+
+/*--------------------*/
+/*      LIVRO        */
+/*--------------------*/
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  color: #333;
+}
+
+
+.detalhes-livro {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.livro-esquerda {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.livro-esquerda img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.livro-esquerda h2 {
+  margin: 1rem 0 0.5rem;
+}
+
+.comprar {
+  background: #0ea5a8;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.comprar:hover {
+  background: #219150;
+}
+
+.livro-direita {
+  flex: 2;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.livro-direita h3 {
+  margin-top: 0;
+}
+
+.livro-direita p {
+  line-height: 1.6;
+}
+
+.livro-direita .info {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.livro-direita .info li {
+  margin-bottom: 0.5rem;
 }
