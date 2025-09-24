@@ -258,7 +258,7 @@ main {
 }
 
 .botao:hover {
-  background: #219150;
+  background: #0a3c3d;
 }
 
 
@@ -316,7 +316,7 @@ body {
 }
 
 .comprar:hover {
-  background: #219150;
+  background: #0a3c3d;
 }
 
 .livro-direita {
@@ -344,3 +344,10 @@ body {
 .livro-direita .info li {
   margin-bottom: 0.5rem;
 }
+
+
+
+/*--------------------*/
+/*      Cadastro      */
+/*--------------------*/
+
